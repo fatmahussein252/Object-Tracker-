@@ -2,7 +2,7 @@
 
 A Python-based object tracking application using OpenCV to track objects in real-time via a webcam (Iriun Webcam over USB or laptop camera). The application combines the CSRT tracker with continuous template matching to robustly track objects, automatically reacquiring them if they leave and reenter the frame.
 
-# Features
+## Features
 
 - Real-time object tracking using the CSRT (Channel and Spatial Reliability Tracking) algorithm.
 - Continuous template matching to reacquire objects that exit and reenter the camera frame.
@@ -10,7 +10,7 @@ A Python-based object tracking application using OpenCV to track objects in real
 - Displays tracking status ("Tracking (Tracker)", "Tracking (Reacquired)", or "Lost, searching...") and FPS.
 - Supports Iriun Webcam (USB mode) or any standard webcam (e.g., laptop camera).
 
-# Requirements
+## Requirements
 
 - Python 3.6+
 - Dependencies:
@@ -22,7 +22,7 @@ A Python-based object tracking application using OpenCV to track objects in real
 - Hardware:
     - USB-connected phone (for Iriun Webcam) or built-in/external webcam.
 
-# Installation
+## Installation
 
 - Install Python Dependencies:
 ```
@@ -43,7 +43,7 @@ ls /dev/video*
 ```
 
 
-# Usage
+## Usage
 
 1) Connect Iriun Webcam (if used):
   - Enable USB debugging on Android (Settings > Developer Options > USB Debugging).
@@ -57,10 +57,10 @@ ls /dev/video*
 ```
 cap = cv2.VideoCapture(2)  # Adjust to 0, 1, or other index
 ```
+ - Run the script:
 
-3) Run the script:
 ```
-python3 object_tracker_iriun_usb_continuous_matching.py
+python3 object_tracker.py
 ```
 
 3) Track an Object:
@@ -72,7 +72,8 @@ python3 object_tracker_iriun_usb_continuous_matching.py
     - "Tracking (Reacquired)": Reinitialized via template matching.
     - "Lost, searching...": Object not detected.
   - Press 'q' to quit.
-# Flow chart
+
+## Flow chart
 The following flowchart illustrates the object tracking process:
 <img width="1421" height="620" alt="diagram-export-2025-07-24-4_45_18-p m" src="https://github.com/user-attachments/assets/4805a3e1-aa2a-44bf-b9d3-84e2290254f2" />
 
